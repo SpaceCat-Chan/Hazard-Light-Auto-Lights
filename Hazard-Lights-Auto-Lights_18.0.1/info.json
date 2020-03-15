@@ -4,5 +4,5 @@
 	"title": "Hazard Lights Auto Ligths",
 	"author": "SpaceCat-Chan",
 	"factorio_version": "0.18",
-	"dependencies": ["Hazard-Lights"]
+	"dependencies": ["Hazard-Lights >= 18.0.2"]
 }
