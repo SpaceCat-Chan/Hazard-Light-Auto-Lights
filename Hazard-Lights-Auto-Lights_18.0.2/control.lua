@@ -33,11 +33,12 @@ function OnLoad()
 		local Width, Heigth
 		Width, Heigth =  v.collision_box.right_bottom.x - v.collision_box.left_top.x, v.collision_box.right_bottom.y - v.collision_box.left_top.y
 		if Width and Heigth and Width >= MinWidth and Heigth >= MinHeigth then
-			remote.call("Hazard-Lights", "AddEntities", {v.name})
+			remote.call("Hazard-Lights", "AddEntities", {v.name}, true)
 		else
 			DebugPrint("Not Big Enough: "..k)
 		end
 	until true end
+	remote.call("Hazard-Lights", "RedoRendering")
 end
 
 function SettingChange(event)
