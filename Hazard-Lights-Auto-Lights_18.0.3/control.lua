@@ -28,6 +28,10 @@ function OnLoad()
 				break
 			end
 		end
+		if v.speed or v.weight or v.attack_parameters then
+			DebugPrint("Moves: "..k)
+			break
+		end
 		if Skip then DebugPrint("Doesnt interact with player: "..k) break end
 		if v.items_to_place_this == nil then DebugPrint("No Items For: "..k) break end
 		local Width, Heigth
